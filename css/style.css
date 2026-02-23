@@ -4127,7 +4127,7 @@ blockquote em, blockquote i, blockquote cite {
   /* Content */
   /* h1-h6 */
   .responsive-ux .site-loading-logo .logo-h1 { font-size: 20px; }
-  .responsive-ux h1 { font-size: 28px; font-size: 2.8rem; line-height: 1; }
+  .responsive-ux h1 { font-size: 28px; font-size: 5rem; line-height: 1; }
   .responsive-ux h2 { font-size: 24px; font-size: 2.4rem; line-height: 1; }
   .responsive-ux h3 { font-size: 20px; font-size: 2rem; line-height: 1; }
   .responsive-ux h4 { font-size: 18px; font-size: 1.8rem; line-height: 1.25; }
