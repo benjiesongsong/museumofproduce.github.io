@@ -279,14 +279,75 @@
 
                                                         <div class="contactform ux-mod-nobg">
 
-                                                            <form action="https://formspree.io/f/mnjboygp" method="POST"
->
-                                                                <p class="span6"><input type="text" id="idi_name" name="idi_name" class="requiredField" value="Name" onBlur="if (this.value =='' ) {this.value = 'Name';}" onFocus="if (this.value == 'Name' || this.value == 'Required' ) { this.value = ''; }" /></p>
-                                                                <p class="span6"><input type="text" id="idi_mail" name="idi_mail" class="requiredField email" value="Email" onBlur="if (this.value =='' ) {this.value = 'Email';}" onFocus="if (this.value == 'Email' || this.value  == 'Required' || this.value == 'Invalid email' ) {this.value = '';}" /></p>
-                                                                <p><textarea rows="4" name="idi_text" id="idi_text" cols="4" class="requiredField inputError"  onfocus="if(this.value==this.defaultValue|| this.value  == 'Required'){this.value='';}" onblur="if(this.value==''){this.value=this.defaultValue;}" >YOUR MESSAGE</textarea></p>
-                                                                <input type="hidden" class="info-tip" value="send" name="contact_form" data-message="Done!" data-sending="Sending" data-error="Please Enter Correct Verification Number" />
-                                                                <div class="btnarea"><input type="submit" id="idi_send" name="idi_send" value="SEND" /></div>
-                                                            </form>
+                                                            <form action="https://formspree.io/f/mnjboygp" method="POST">
+                                                                <!-- Formspree settings -->
+                                                                <input type="hidden" name="_subject" value="New inquiry — Museum of Produce" />
+                                                                <input type="hidden" name="_format" value="plain" />
+                                                                <!-- Optional: redirect after submit -->
+                                                                <!-- <input type="hidden" name="_next" value="https://museumofproduce.com/thank-you.html" /> -->
+
+                                                                <!-- Honeypot (anti-spam): hide with CSS below -->
+                                                                <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hp-field" aria-hidden="true" />
+
+                                                                <p class="span6">
+                                                                    <input
+                                                                    type="text"
+                                                                    id="idi_name"
+                                                                    name="name"
+                                                                    class="requiredField"
+                                                                    placeholder="Name"
+                                                                    autocomplete="name"
+                                                                    required
+                                                                    minlength="2"
+                                                                    maxlength="80"
+                                                                    />
+                                                                </p>
+
+                                                                <p class="span6">
+                                                                    <input
+                                                                    style="margin-bottom: 20px"
+                                                                    type="email"
+                                                                    id="idi_mail"
+                                                                    name="email"
+                                                                    class="requiredField email"
+                                                                    placeholder="Email"
+                                                                    autocomplete="email"
+                                                                    required
+                                                                    maxlength="120"
+                                                                    />
+                                                                </p>
+
+                                                                <!-- Set Reply-To so you can reply directly -->
+                                                                <input type="hidden" name="_replyto" value="" />
+
+                                                                <p class="span6">
+                                                                    <textarea
+                                                                    rows="4"
+                                                                    name="message"
+                                                                    id="idi_text"
+                                                                    cols="4"
+                                                                    class="requiredField"
+                                                                    placeholder="Your message"
+                                                                    required
+                                                                    minlength="10"
+                                                                    maxlength="2000"
+                                                                    ></textarea>
+                                                                </p>
+
+                                                                <div class="btnarea">
+                                                                    <input type="submit" id="idi_send" value="Send" />
+                                                                </div>
+                                                                </form>
+
+                                                                <style>
+                                                                    .hp-field {
+                                                                        position: absolute !important;
+                                                                        left: -9999px !important;
+                                                                        width: 1px !important;
+                                                                        height: 1px !important;
+                                                                        opacity: 0 !important;
+                                                                    }
+                                                                </style>
 
                                                         </div>
 
