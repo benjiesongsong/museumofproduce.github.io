@@ -134,7 +134,7 @@
 
 .pswp__img {
   position: absolute;
-  width: auto;
+  width: auto !important;
   height: auto;
   top: 0;
   left: 0; }
